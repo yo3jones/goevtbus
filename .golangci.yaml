@@ -1405,7 +1405,7 @@ linters-settings:
       # https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#max-public-structs
       - name: max-public-structs
         severity: warning
-        disabled: false
+        disabled: true
         arguments: [ 3 ]
       # https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#modifies-parameter
       - name: modifies-parameter
@@ -1691,8 +1691,9 @@ linters-settings:
     # ignore-chan-recv-ok: true
     # Optional list of variable names that should be ignored completely.
     # Default: []
-    # ignore-names:
-    #   - err
+    ignore-names:
+      - err
+      - tc
     # Optional list of variable declarations that should be ignored completely.
     # Entries must be in one of the following forms (see below for examples):
     # - for variables, parameters, named return values, method receivers, or type parameters:
